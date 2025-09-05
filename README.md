@@ -25,3 +25,56 @@ Test voice commands like "create a realistic portrait" or "generate anime charac
 Export the workflow using the green Export button
 Import into ComfyUI to actually generate images
 Check ComfyUI's output folder for your generated images
+
+
+<img width="1031" height="753" alt="Screenshot 2025-09-04 at 9 45 50 PM" src="https://github.com/user-attachments/assets/f1aca543-4e4c-49e1-9db5-69ff66e7f261" />
+
+JSON
+```
+{
+  "nodes": [
+    {
+      "id": "input-1",
+      "name": "Text Prompt Input",
+      "type": "input",
+      "description": "Input text prompt for image generation",
+      "parameters": {
+        "prompt": "beautiful artwork",
+        "negative_prompt": "blurry, low quality"
+      }
+    },
+    {
+      "id": "gen-1",
+      "name": "Stable Diffusion Model",
+      "type": "generation",
+      "description": "AI model for generating images from text",
+      "parameters": {
+        "model": "stable-diffusion-v1-5",
+        "steps": 30,
+        "cfg_scale": 7.5,
+        "width": 512,
+        "height": 512,
+        "seed": -1,
+        "prompt": "funny cat was running around and laughing"
+      }
+    },
+    {
+      "id": "output-1",
+      "name": "Image Output",
+      "type": "output",
+      "description": "Save generated image",
+      "parameters": {
+        "format": "png",
+        "quality": 100
+      }
+    }
+  ],
+  "metadata": {
+    "created": "2025-09-05T01:46:05.818Z",
+    "source": "voice-command",
+    "transcript": " funny cat was running around and laughing"
+  }
+}
+```
+
+Author [Elena Nurullina](https://www.linkedin.com/in/elena-nurullina/)
