@@ -5,26 +5,26 @@ An innovative AI tool that converts natural voice commands into ComfyUI workflow
 The app includes advanced voice processing that matches natural language commands to appropriate ComfyUI workflows, supports multiple languages, and provides visual feedback through an animated audio visualizer. Users can export their generated workflows as JSON files and review their session history with confidence scores for each voice command.
 
 Immediate Outputs (In the App):
-Generated Workflow: Displays on the right side with visual nodes
-Session History: Shows previous voice commands and their workflows
-Real-time Transcript: Shows what the app heard from your voice
+  - Generated Workflow: Displays on the right side with visual nodes
+  - Session History: Shows previous voice commands and their workflows
+  - Real-time Transcript: Shows what the app heard from your voice
 
 ### Exported Outputs:
-JSON File: Click "Export" to download the workflow as a JSON file
-Download Location: Goes to your browser's default download folder
-File Name: comfyui-workflow-[timestamp].json
+  - JSON File: Click "Export" to download the workflow as a JSON file
+  - Download Location: Goes to your browser's default download folder
+  - File Name: comfyui-workflow-[timestamp].json
 
 ### ComfyUI Integration:
-Open ComfyUI in your browser
-Load the exported JSON file into ComfyUI's workflow editor
-Run the workflow in ComfyUI
-Generated images will appear in ComfyUI's output directory (usually ComfyUI/output/)
+  - Open ComfyUI in your browser
+  - Load the exported JSON file into ComfyUI's workflow editor
+  - Run the workflow in ComfyUI
+  - Generated images will appear in ComfyUI's output directory (usually ComfyUI/output/)
 
 ### Next Steps:
-Test voice commands like "create a realistic portrait" or "generate anime character"
-Export the workflow using the green Export button
-Import into ComfyUI to actually generate images
-Check ComfyUI's output folder for your generated images
+  - Test voice commands like "create a realistic portrait" or "generate an anime character"
+  - Export the workflow using the green Export button
+  - Import into ComfyUI to actually generate images
+  - Check ComfyUI's output folder for your generated images
 
 
 <img width="1031" height="753" alt="Screenshot 2025-09-04 at 9 45 50 PM" src="https://github.com/user-attachments/assets/f1aca543-4e4c-49e1-9db5-69ff66e7f261" />
