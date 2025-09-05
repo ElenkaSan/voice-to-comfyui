@@ -4,6 +4,8 @@ An innovative AI tool that converts natural voice commands into ComfyUI workflow
 
 The app includes advanced voice processing that matches natural language commands to appropriate ComfyUI workflows, supports multiple languages, and provides visual feedback through an animated audio visualizer. Users can export their generated workflows as JSON files and review their session history with confidence scores for each voice command.
 
+Try the app [Voice-to-ComfyUI Converter](https://voice-to-comfyui.vercel.app/)
+
 Immediate Outputs (In the App):
   - Generated Workflow: Displays on the right side with visual nodes
   - Session History: Shows previous voice commands and their workflows
