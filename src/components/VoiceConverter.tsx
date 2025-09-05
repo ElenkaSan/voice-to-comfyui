@@ -296,9 +296,9 @@ const VoiceConverter: React.FC = () => {
             </div>
 
             {/* Recent Sessions */}
-            {sessions.length > 0 && (
-              <div className="bg-gray-800 rounded-2xl p-6 border border-gray-700">
-                <h3 className="text-lg font-semibold text-white mb-4">Recent Sessions</h3>
+            <div className="bg-gray-800 rounded-2xl p-6 border border-gray-700">
+              <h3 className="text-lg font-semibold text-white mb-4">Recent Sessions</h3>
+              {sessions.length > 0 ? (
                 <div className="space-y-3 max-h-96 overflow-y-auto">
                   {sessions.map((session) => (
                     <div
@@ -330,8 +330,18 @@ const VoiceConverter: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-            )}
+              ) : (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Play className="w-8 h-8 text-gray-500" />
+                  </div>
+                  <h4 className="text-gray-400 font-medium mb-2">No Sessions Yet</h4>
+                  <p className="text-gray-500 text-sm">
+                    Start recording voice commands to see your session history here
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Workflow Display Section */}
