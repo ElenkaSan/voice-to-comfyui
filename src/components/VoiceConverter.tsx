@@ -107,11 +107,13 @@ const VoiceConverter: React.FC = () => {
     setAudioLevel(0);
     recognitionRef.current?.stop();
     
+    // Stop all media tracks to fully release microphone
+    if (audioContextRef.current && audioContextRef.current.state !== 'closed') {
+      audioContextRef.current.close();
+    }
+    
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
-    }
-    if (audioContextRef.current) {
-      audioContextRef.current.close();
     }
   };
 
@@ -200,6 +202,7 @@ const VoiceConverter: React.FC = () => {
                 >
                   <option value="en-US">English (US)</option>
                   <option value="en-GB">English (UK)</option>
+                  <option value="ru-RU">Russian (Русский)</option>
                   <option value="es-ES">Spanish</option>
                   <option value="fr-FR">French</option>
                   <option value="de-DE">German</option>
@@ -240,6 +243,12 @@ const VoiceConverter: React.FC = () => {
                   {isRecording ? 'Listening...' : 'Click to start voice recognition'}
                 </p>
                 
+                {isRecording && (
+                  <p className="text-sm text-yellow-400 mb-2">
+                    Click the microphone button again or use "Stop Recording" to stop
+                  </p>
+                )}
+                
                 {isProcessing && (
                   <div className="flex items-center justify-center text-blue-400">
                     <div className="animate-spin w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full mr-2"></div>
@@ -273,6 +282,15 @@ const VoiceConverter: React.FC = () => {
                     <Trash2 className="w-4 h-4 mr-2" />
                     Clear
                   </button>
+                  {isRecording && (
+                    <button
+                      onClick={stopRecording}
+                      className="flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+                    >
+                      <MicOff className="w-4 h-4 mr-2" />
+                      Stop Recording
+                    </button>
+                  )}
                 </div>
               )}
             </div>

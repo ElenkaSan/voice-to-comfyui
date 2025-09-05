@@ -117,6 +117,16 @@ const WorkflowDisplay: React.FC<WorkflowDisplayProps> = ({ workflow }) => {
       
       {/* Workflow Stats */}
       <div className="mt-6 pt-4 border-t border-gray-700">
+        <div className="mb-4 p-3 bg-blue-900/30 border border-blue-700 rounded-lg">
+          <h4 className="text-sm font-semibold text-blue-300 mb-2">📁 Where to find outputs:</h4>
+          <ul className="text-xs text-blue-200 space-y-1">
+            <li>• <strong>JSON Export:</strong> Downloads to your browser's download folder</li>
+            <li>• <strong>ComfyUI Integration:</strong> Import the JSON file into ComfyUI workflow editor</li>
+            <li>• <strong>Generated Images:</strong> Will appear in ComfyUI's output folder after running the workflow</li>
+            <li>• <strong>Session History:</strong> View previous workflows in the "Recent Sessions" panel</li>
+          </ul>
+        </div>
+        
         <div className="grid grid-cols-4 gap-4 text-center">
           <div>
             <div className="text-2xl font-bold text-green-400">
